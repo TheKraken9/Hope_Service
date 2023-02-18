@@ -1,20 +1,6 @@
 create database hope;
 /c hope;
 
-create table Header(
-    id varchar(10) primary key not null ,
-    title varchar(50) not null ,
-    description text
-);
-
-
-create table Footer(
-    id varchar(10) primary key not null ,
-    title varchar(50) not null ,
-    description text,
-    idIcon varchar(10) References Icon (id)
-);
-
 create table Image(
     id varchar(10) primary key not null ,
     name varchar(50),
@@ -25,6 +11,19 @@ create table Icon(
     id varchar(10) primary key not null ,
     name varchar(50),
     url varchar(50)  not null
+);
+
+create table Header(
+    id varchar(10) primary key not null ,
+    title varchar(50) not null ,
+    description text
+);
+
+create table Footer(
+    id varchar(10) primary key not null ,
+    title varchar(50) not null ,
+    description text,
+    idIcon varchar(10) References Icon (id)
 );
 
 create table About(
