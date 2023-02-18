@@ -94,8 +94,24 @@ create table Team(
     idImage varchar(10) references Image (id)
 );
 
+create table historyTeam(
+    id varchar(10) primary key not null ,
+    name varchar(50) not null ,
+    title varchar(50) not null ,
+    description text,
+    idImage varchar(10) references Image (id)
+);
 
 create table Service(
+    id varchar(10) primary key not null ,
+    name varchar(50) not null ,
+    title varchar(50) not null ,
+    description text,
+    idImage varchar(10) references Image (id),
+    idIcon varchar(10) references Icon (id)
+);
+
+create table historyService(
     id varchar(10) primary key not null ,
     name varchar(50) not null ,
     title varchar(50) not null ,
