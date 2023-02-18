@@ -2,7 +2,7 @@
 
 namespace models;
 
-class Contact extends \CI_Model
+class ContactModel extends \CI_Model
 {
     public function __construct()
     {
@@ -10,17 +10,17 @@ class Contact extends \CI_Model
     }
 
     public function getAllContact() {
-        $query = $this->db->get('Contact');
+        $query = $this->db->get('ContactModel');
         return $query->result_array();
     }
 
     public function getSpecifiedContact($id) {
-        $query = $this->db->get_where('Contact', array('id' => $id));
+        $query = $this->db->get_where('ContactModel', array('id' => $id));
         return $query->row_array();
     }
 
     public function createContact($id, $title, $description, $idIcon) {
-        $this->db->insert('Contact', array('id' => $id, 'title' => $title, 'description' => $description, 'idIcon' => $idIcon));
+        $this->db->insert('ContactModel', array('id' => $id, 'title' => $title, 'description' => $description, 'idIcon' => $idIcon));
     }
 
     public function updateContact($id, $title, $description, $idIcon) {
@@ -28,11 +28,11 @@ class Contact extends \CI_Model
         $this->db->set('description', $description);
         $this->db->set('idIcon', $idIcon);
         $this->db->where('id', $id);
-        $this->db->update('Contact');
+        $this->db->update('ContactModel');
     }
 
     public function deleteContact($id) {
         $this->db->where('id', $id);
-        $this->db->delete('Contact');
+        $this->db->delete('ContactModel');
     }
 }
