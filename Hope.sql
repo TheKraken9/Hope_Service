@@ -57,30 +57,49 @@ create table Partners(
     idImage varchar(10) references Image (id)
 );
 
-create table Events(
-                       id varchar(10) primary key not null ,
-                       name varchar(50) not null ,
-                       date date ,
-                       title varchar(50) not null ,
-                       description text not null ,
-                       idImage varchar(10) references Image (id),
-                       idIcon varchar(10) references Icon (id)
+create table historyPartners(
+    id varchar(10) primary key not null ,
+    name varchar(50) not null ,
+    title varchar(50),
+    description text,
+    idImage varchar(10) references Image (id)
 );
+
+create table Events(
+    id varchar(10) primary key not null ,
+    name varchar(50) not null ,
+    date date ,
+    title varchar(50) not null ,
+    description text not null ,
+    idImage varchar(10) references Image (id),
+    idIcon varchar(10) references Icon (id)
+);
+
+create table historyEvents(
+    id varchar(10) primary key not null ,
+    name varchar(50) not null ,
+    date date ,
+    title varchar(50) not null ,
+    description text not null ,
+    idImage varchar(10) references Image (id),
+    idIcon varchar(10) references Icon (id)
+);
+
 -- otran tsy de ilaina ilay actu fa mitovy ihany ny event st actu
 create table Team(
-                     id varchar(10) primary key not null ,
-                     name varchar(50) not null ,
-                     title varchar(50) not null ,
-                     description text,
-                     idImage varchar(10) references Image (id)
+    id varchar(10) primary key not null ,
+    name varchar(50) not null ,
+    title varchar(50) not null ,
+    description text,
+    idImage varchar(10) references Image (id)
 );
 
 
 create table Service(
-                        id varchar(10) primary key not null ,
-                        name varchar(50) not null ,
-                        title varchar(50) not null ,
-                        description text,
-                        idImage varchar(10) references Image (id),
-                        idIcon varchar(10) references Icon (id)
+    id varchar(10) primary key not null ,
+    name varchar(50) not null ,
+    title varchar(50) not null ,
+    description text,
+    idImage varchar(10) references Image (id),
+    idIcon varchar(10) references Icon (id)
 );

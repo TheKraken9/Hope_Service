@@ -19,8 +19,8 @@ class Header_model extends \CI_Model
         return $query->row_array();
     }
 
-    public function createHeader($title, $description) {
-        $this->db->insert('Header', array('title' => $title, 'description' => $description));
+    public function createHeader($id, $title, $description) {
+        $this->db->insert('Header', array('id' => $id, 'title' => $title, 'description' => $description));
     }
 
     public function updateHeader($id, $title, $description) {
@@ -28,5 +28,10 @@ class Header_model extends \CI_Model
         $this->db->set('description', $description);
         $this->db->where('id', $id);
         $this->db->update('Header');
+    }
+
+    public function deleteHeader($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('Header');
     }
 }
