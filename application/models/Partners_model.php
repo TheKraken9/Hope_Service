@@ -2,7 +2,9 @@
 
 namespace models;
 
-class Partners_model extends \CI_Model
+use CI_Model;
+
+class Partners_model extends CI_Model
 {
     public function __construct()
     {

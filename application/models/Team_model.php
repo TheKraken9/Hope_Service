@@ -2,7 +2,9 @@
 
 namespace models;
 
-class Team_model extends \CI_Model
+use CI_Model;
+
+class Team_model extends CI_Model
 {
     public function __construct()
     {

@@ -2,7 +2,9 @@
 
 namespace models;
 
-class Events_model extends \CI_Model
+use CI_Model;
+
+class Events_model extends CI_Model
 {
     public function __construct()
     {

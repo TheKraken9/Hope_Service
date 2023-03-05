@@ -2,7 +2,9 @@
 
 namespace models;
 
-class Contact_model extends \CI_Model
+use CI_Model;
+
+class Contact_model extends CI_Model
 {
     public function __construct()
     {
