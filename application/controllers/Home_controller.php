@@ -6,7 +6,6 @@ class Home_controller extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Header_model');
         /*$this->load->model('About_model');
         $this->load->model('Contact_model');
         $this->load->model('ContactUs_model');
@@ -18,6 +17,7 @@ class Home_controller extends CI_Controller
     }
 
     public function Home() {
+        $this->load->model('header_model');
         $data['header'] = $this->header_model->getAllHeader();
         /*$data['about'] = $this->about_model->getAllAbout();
         $data['contact'] = $this->contact_model->getAllContact();
