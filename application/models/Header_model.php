@@ -2,7 +2,9 @@
 
 namespace models;
 
-class header_model extends \CI_Model
+use CI_Model;
+
+class Header_model extends CI_Model
 {
     public function __construct()
     {
